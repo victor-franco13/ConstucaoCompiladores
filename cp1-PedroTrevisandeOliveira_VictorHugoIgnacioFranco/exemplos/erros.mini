@@ -1,0 +1,11 @@
+// Exemplo com erros léxicos: o scanner reporta cada um com linha:coluna
+// e continua tokenizando o restante do arquivo.
+int valor = 10 @ 2;
+string s = "string sem fechar
+double d = 3.;
+bool b = x & y;
+int _interno = 1;
+char c = 'ab';
+string ok = "esta linha está correta";
+/* comentário de bloco que nunca fecha
+int perdido = 0;

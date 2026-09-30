@@ -1,0 +1,48 @@
+/*
+ * Exemplo válido da linguagem Mini.
+ * Usa os 5 tipos básicos, if/else, while, for, break/continue,
+ * funções com retorno e procedimentos (void) sem retorno.
+ */
+
+// função com parâmetros e retorno de valor
+int fatorial(int n) {
+    int resultado = 1;
+    while (n > 1) {
+        resultado = resultado * n;
+        n = n - 1;
+    }
+    return resultado;
+}
+
+// função com retorno double
+double media(double a, double b) {
+    return (a + b) / 2.0;
+}
+
+// procedimento: sem valor de retorno
+void imprimeLinha(string texto) {
+    print(texto);
+    return;
+}
+
+void main() {
+    int i;
+    double nota = 7.5;
+    bool aprovado = nota >= 6.0 && nota <= 10.0;
+    char conceito = 'A';
+    string msg = "Resultado: \"ok\"\n";
+
+    if (aprovado) {
+        imprimeLinha(msg);
+    } else {
+        conceito = 'F';
+    }
+
+    for (i = 0; i < 10; i = i + 1) {
+        if (i % 2 == 0) { continue; }
+        if (i != 7 || !aprovado) { break; }
+    }
+
+    int f = fatorial(5);
+    double m = media(nota, 9.25);
+}
