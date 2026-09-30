@@ -1,3 +1,5 @@
+Trabalho feito por Victor Franco e Pedro Trevisan
+
 Como compilar o projeto:
 
 javac -encoding UTF-8 -d out src\lexer\*.java src\Main.java test\lexer\*.java
